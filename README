@@ -1,0 +1,8 @@
+***ЗАМЕТОЧКИ***
+
+mysqldump -uroot -p Books > books.sql     // для создания дампа
+
+mysql -uroot -p database < database.sql   //cmd для развертывания
+or
+mysql> use database;                      //mysql console
+mysql> source database.sql
