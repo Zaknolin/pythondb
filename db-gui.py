@@ -46,16 +46,16 @@ class QueryWindow( Frame ):
 			connection = MySQLdb.connect( db = "Books" )
 			cursor = connection.cursor()
 			cursor.execute( self.query.get() )
-		'''except MySQLdb.OperationalError, message:
+		except MySQLdb.OperationalError, message:
 			errorMessage = "Error %d:\n%s" % \
 				( message[ 0 ], message[ 1 ] )
 			showerror( "Error", errorMessage )
-			return'''
-		'''else: # obtain user-requested information
+			return
+		else: # obtain user-requested information
 			data = cursor.fetchall()
 			fields = cursor.description # metadata from query
 			cursor.close()
-			connection.close()'''
+			connection.close()
 
 		# clear results of last query
 		self.panes.destroy()
